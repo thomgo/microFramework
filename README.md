@@ -6,11 +6,11 @@ Il a pour objectif de proposer aux étudiants un cadre de travail organisé tout
 
 ## Démarrage
 
-Pour utiliser ce petit framework, il suffit de la cloner sur mon repository et de s'en servir comme base de travail.
+Pour utiliser ce petit framework, il suffit de le cloner sur mon repository et de s'en servir comme base de travail.
 
-Attention, il ne sert à rien de faire des copier-coller des différents pour les intégrer à un projet existant. Il faut utiliser le dossier en l'état. C'est à vous d'y inclure votre code et non l'inverses. Le moindre fichier manquant empêchera l'ensemble de fonctionner.
+Attention, il ne sert à rien de faire des copier-coller des différents pour les intégrer à un projet existant. Il faut utiliser le dossier en l'état. C'est à vous d'y inclure votre code et non l'inverse. Le moindre fichier manquant empêchera l'ensemble de fonctionner.
 
-Attention également ce "framework" n'a qu'une visée pédagogique, il permet de mettre les étudiants en contact avec des notions présentes dans les frameworks professionnels de manière simplifiée. Il ne peut en aucun être utilisé pour une mise en production.
+Attention également ce "framework" n'a qu'une visée pédagogique, il permet de mettre les étudiants en contact avec des notions présentes dans les frameworks professionnels de manière simplifiée. Il ne peut en aucun cas être utilisé pour une mise en production.
 
 ## La configuration
 
@@ -38,14 +38,15 @@ Une route se définie comme suit :
   "Fonction (exemple listAdmins pour listAdmins())",
   Optionnel, un tableau de paramètres attendus
    [
-    "parametre1" => ["typeAttendu", optionnel[valeurAttendu]],
-    "parametre2" => ["typeAttendu", optionnel[valeurAttendu]]
+    "parametre1" => ["typeAttendu", optionnel[valeursAttendues]],
+    "parametre2" => ["typeAttendu", optionnel[valeursAttendues]]
   ]
  "status" => "role du visiteur à possèder au minimum (voir le fichier de config)"
 ]
 
 ```
 Trois types sont utilisables, "integer", "string" et "boolean".
+Les valeurs spécifiques attendues sont indiquées les unes à la suite des autres dans un tableau.
 
 ## La gestion des redirections
 
@@ -75,7 +76,7 @@ Si vous devez démarrer vous même une session sur une page, vous avez accès à
 - initializeAnonymousSession qui démarre une session dite anonyme et n'attend aucun argument.
 - initializeUserSession qui stocke en session à l'index "user" l'utlisateur passé en argument à la fonction. Attention l'utlisateur doit être représenté par un tableau associatif.
 
-##Chargement des fichiers
+## Chargement des fichiers
 
 Si vous un service ou autre fichier doit être accessible dans toutes les pages, il convient alors de le charger dans l'index.php, il sera alors accessible partout puisque le routeur fait de l'index le point de départ de l'application.
 
