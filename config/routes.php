@@ -10,13 +10,17 @@
 //    "parametre1" => ["typeAttendu", optionnel[valeurAttendu]],
 //    "parametre2" => ["typeAttendu", optionnel[valeurAttendu]]
 //  ]
-// "role" => "role"
+// "status" => "role"
 //]
 function getRoutes() {
   return [
     "" => [
       "exemple",
       "welcome"
+    ],
+    "login" => [
+      "admin",
+      "loginUser"
     ]
   ];
 }
