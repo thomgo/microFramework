@@ -18,6 +18,15 @@ function getRoutes() {
       "exemple",
       "welcome"
     ],
+    "param" => [
+      "exemple",
+      "param",
+      [
+        "id" => ["integer"],
+        "name" => ["string"],
+        "istrue" => ["boolean"]
+      ]
+    ],
     "login" => [
       "admin",
       "loginUser"
