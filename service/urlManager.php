@@ -6,7 +6,7 @@ function addParameters($action, $parameters) {
   //Si les paramètre son définis, on les ajoute à la route
   foreach ($parameters as $key => $value) {
     $action .= $key ."=" . $value;
-    if(next($parameters)) {
+    if($value !== end($parameters)) {
       $action .= "&";
     }
   }

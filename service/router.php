@@ -76,7 +76,7 @@ function checkRequestParameters($route) {
     foreach ($_GET as $key => $value) {
       if($key !== "path") {
         //On vérifie que le paramètre de GET existe et contient une valeur
-        if(!isset($parameters[$key]) || empty($value)) {
+        if(!isset($parameters[$key]) || strlen($value) < 1) {
           return false;
         }
         //On vérifie la validité de la valeur avec les spécifications attendues
